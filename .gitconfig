@@ -1,0 +1,50 @@
+[user]
+	name = cerebr4l
+	username = cerebr4lz
+#	email = jsteele101010@gmail.com
+
+	
+[init]
+	defaultBranch = main
+	
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = bat
+
+[delta]
+	features = line-numbers decorations
+	line-numbers = true
+
+[github]
+	user = cerebr4lz
+
+
+[web]
+	browser = google-chrome
+	
+	
+[http]
+#	sslCAinfo = $SSLPATH
+#	sslverify = false
+
+[alias]
+	a = add --all
+	ai = add -i
+	#==================#
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	#==================#
+	cl = clone
+	cl1 = clone --depth 1
+	#==================#
+	cp = cherry-pick
+	d = diff
+	f = fetch
+	g = grep -p
+	l = log --oneline
+	lg = log --oneline --graph --decorate
+	s = status
+	sb = status -s -b
+	pom = push origin main
