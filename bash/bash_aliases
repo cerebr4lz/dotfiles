@@ -1,0 +1,56 @@
+#alias magic
+alias basee='view ~/.bash_aliases'
+alias ba='source ~/.bash_aliases'
+alias brc='source ~/.bashrc'
+alias bagr='alias | grep'
+
+alias brcvi='vim ~/.bashrc'
+alias vrcvi='vim ~/.vimrc' 
+alias bavi='vim ~/.bash_aliases'
+
+#general utilities
+alias ..='cd ..'
+alias c='clear'
+alias gimme='sudo apt install'
+alias tmux='TERM=xterm-256color tmux'
+
+#listing preferences
+alias la='ls -A'
+alias l='ls -CF'
+alias lf='ls -alF'
+alias ll='ls -lA --color=always --group-directories-first | less -R'
+alias lj='ls -lcURFAS --color=always --human-readable --size -1 | less -R'
+alias iwas='ls -lftcA --color=always -1' #lists last directorie/files touched
+
+#dev utilities
+alias makeme='cp ~/Dev/coding/.makefile ./Makefile && vim Makefile'
+alias mithere='cp ~/Dev/coding/.mit ./LICENSE'
+alias code='cd ~/Dev/coding && iwas'
+alias gitpat='cat ~/Dev/coding/.git_token'
+
+#file utilities
+alias untar='tar -zxvf'
+alias mkgo='mkgo' # a self-made function at bottom of ~/.bashrc
+
+#disk utilities
+alias duh='du -h --max-depth=1'
+alias mem='free -h'
+
+#password and encryption
+alias getpass='openssl rand -base64 20'
+alias sha='shasum -a 256'
+
+#network utilities
+alias speed='speedtest-cli --server 2406 --simple'
+alias ping='ping -c 10'
+alias ipi='ipconfig getifaddr en0'
+alias ipe='curl ipinfo.io/ip'
+
+#web utilities
+alias wget='wget -c'
+alias www='python -m SimpleHTTPServer 8000'
+
+
+
+
+
