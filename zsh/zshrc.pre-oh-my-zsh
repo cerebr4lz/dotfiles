@@ -1,0 +1,28 @@
+#my attempt at an elegant config file that will work well for me and teach me the ways of the force...
+
+#hidden alias file variable
+ALIAS_FILE="${HOME}/.zsh_aliases"
+
+reload_aliases(){
+				#do nothing if there is no alias file ( but there should be )
+				[[ -e ALIAS_FILE ]] || return 1
+
+				#check if file has been modified since last refresh
+				#the `(:A)` modifier resolves any symbolic links
+
+				if [[ $LAST_ALIAS_RELOAD < $(stat -c %Y ${ALIAS_FILE}(:A))  ]]; then
+								#OPTIONAL: remove all aliases; only do this if all of your aliases are defined in the file
+								#also affects aliases defined on the command line
+								# unalias - '*' #uncomment the beginning of this line to activate `cleansing mode`
+
+								#load aliases
+								source $ALIAS_FILE
+
+								#update the date of last reload (full time)
+								LAST_ALIAS_RELOAD=$(date +%s)
+				fi
+
+#make `reload_aliases()` run before each prompt (???)
+# autoload -Uz add-zsh-hook
+# add-zsh-hook precmd reload_aliases
+}

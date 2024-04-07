@@ -1,0 +1,67 @@
+#alias magic
+alias zsee='view ~/.zsh_aliases'
+alias zvi='vim ~/.zsh_aliases'
+alias za='source ~/.zsh_aliases'
+alias zrc='source ~/.zshrc'
+alias zagr='alias | grep'
+
+alias zrcvi='vim ~/.zshrc'
+alias vrcvi='vim ~/.vimrc' 
+alias visrc='source ~/.vimrc' 
+
+#general utilities
+alias ..='cd ..'
+alias c='clear'
+alias gimme='brew install'
+alias tmux='TERM=xterm-256color tmux'
+alias os='neofetch'
+
+#listing preferences
+alias ls='ls -F --color=always'
+alias l='ls'
+alias ll='ls -hAlF --color=always | bat'
+alias la='ls -ACF'
+alias lf='ls -alF'
+#alias ll='ls -lA --color=always --group-directories-first | bat' #less -R'
+alias lj='ls -scoOFURLlGASH --color=always -1 | bat' # less -R'
+alias iwas='ls -lftcA --color=always -1 | bat' #lists last directories/files touched
+
+#colorized help using bat
+alias -g -- -h='-h 2>&1 | bat --language=help --style=plain'
+alias -g -- --help='--help 2>&1 | bat --language=help --style=plain'
+
+#OSX only
+alias ipi='ipconfig getifaddr en0'
+
+#dev utilities
+alias makeme='cp ~/Dev/coding/.makefile ./Makefile && vim Makefile'
+alias mithere='cp ~/Dev/coding/.mit ./LICENSE'
+alias code='cd ~/Dev/coding'
+alias gitpat='cat ~/Dev/coding/.git_token'
+alias vi='nvim'
+alias vim='nvim'
+
+  #git quickies
+alias gc1='git clone --depth=1'
+
+#file utilities
+alias untar='tar -zxvf'
+#alias mkgo='mkgo' # a self-made function at bottom of ~/.bashrc
+
+#disk utilities
+alias duh='du -h --max-depth=1'
+alias mem='free -h'
+
+#password and encryption
+alias getpass='openssl rand -base64 20'
+alias sha='shasum -a 256'
+
+#network utilities
+alias speed='speedtest-cli --server 2406 --simple'
+alias ping='ping -c 10'
+alias ipe='curl ipinfo.io/ip'
+
+#web utilities
+alias wget='wget -c'
+alias www='python -m SimpleHTTPServer 8000'
+
